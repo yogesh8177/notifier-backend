@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Client</title>
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+	<h1>Job Submissions</h1>
+	<script type="text/javascript">
+		var client = io.connect('http://localhost:3001', {reconnect: true});
+		var clientId = null;
+
+		client.on('connect', function(socket){
+			
+			client.on('register', function(id){
+				console.log(id);
+				clientId = id;
+			});
+
+			client.on('notification', function(message){
+				console.log(message);
+			});
+		})
+
+		function submitJob(){
+			
+		}
+	</script>
+
+</body>
+</html>

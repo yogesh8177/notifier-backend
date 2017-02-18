@@ -1,0 +1,22 @@
+{
+  "name": "notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "socket"
+  ],
+  "author": "Yogesh Jadhav",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.16.1",
+    "express": "4.14.1",
+    "redis": "2.6.5",
+    "socket.io-client": "1.7.3",
+    "request": "2.79.0"
+  }
+}
