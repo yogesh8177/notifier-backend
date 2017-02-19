@@ -1,9 +1,9 @@
 var express = require('express'),
-    app = express(),
-    cors = require('cors'),
-    server = require('http').Server(app),
-    redis = require('redis'),
-    bodyParser = require('body-parser'),
+	app = express(),
+	cors = require('cors'),
+	server = require('http').Server(app),
+	redis = require('redis'),
+	bodyParser = require('body-parser'),
 	tasksQueue = redis.createClient({ host: 'localhost', port: 6379 });
 
 
