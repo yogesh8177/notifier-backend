@@ -19,7 +19,7 @@ app.post('/job', function(request, response){
 		JSON.stringify({
 				 client: request.body.ID,
 				 job: request.body.message,
-				 jobId: request.body.jobID
+				 jobID: request.body.jobID
 				}));
 		response.type('application/json');
 		response.send({data: 'success'});
