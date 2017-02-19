@@ -2,7 +2,7 @@ var express = require('express'),
     app = express(),
     server = require('http').Server(app),
     bodyParser = require('body-parser'),
-	io = require('socket.io')(server);
+    io = require('socket.io')(server);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
