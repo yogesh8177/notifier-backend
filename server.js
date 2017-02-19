@@ -16,11 +16,11 @@ app.post('/job', function(request, response){
 	console.log(request.body);
 	if(request.body && request.body.ID && request.body.message){
 		tasksQueue.publish('tasksChannel', 
-			JSON.stringify({
-							  client: request.body.ID,
-							  job: request.body.message,
-							  jobId: request.body.jobID
-						   }));
+		JSON.stringify({
+				 client: request.body.ID,
+				 job: request.body.message,
+				 jobId: request.body.jobID
+				}));
 		response.type('application/json');
 		response.send({data: 'success'});
 	}else{
