@@ -9,7 +9,7 @@ tasksQueue.on('message', function(channel, message){
 	console.log('channel:', channel, 'message:', json);
 	request.debug = true;
 	setTimeout(function(){
-		request.post('http://localhost:3001/notify', {form: {client: json.client, job: json.job, jobID: json.jobId}});
+		request.post('http://localhost:3001/notify', {form: json});
 	}, 3000);
 	
 });
